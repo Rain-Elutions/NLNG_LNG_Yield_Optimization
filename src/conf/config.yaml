@@ -1,0 +1,35 @@
+path:
+  raw_data: ../data/alldata.csv # very large
+  processed_data: ../data/my_dataframe2.csv # data after EDA
+  tags_info: ../data/NLNG Tags, KPIs, Objects for Dashboard v1.xlsx
+  new_ctrl_tags: ../data/Control Tags list V4.xlsx
+  selected_tags: ../result/selected_tags.csv
+  new_selected_tags: ../result/new_selected_tags.csv
+  cv_tags_min_max: ../result/cv_tags_min_max.csv
+  new_cv_tags_min_max: ../result/new_cvs_min_max.csv
+  feat_imp_dict:
+    round1: ../result/dict/feat_importance_round1_20runs.json
+    round2: ../result/dict/feat_importance_round2_20runs.json
+    round3: ../result/dict/feat_importance_round3_20runs.json
+  v3:
+    feat_imp_dict2:
+      round1: ../result/dict/latest/feat_importance_round1_20runs.json
+      round2: ../result/dict/latest/feat_importance_round2_20runs.json
+      round3: ../result/dict/latest/feat_importance_round3_20runs.json
+    selected_tags: ../result/latest_result/new_selected_feats.csv
+
+# data:
+#   raw_data: ../data/alldata.csv # very large
+#   processed_data: ../data/my_dataframe2.csv # data after EDA
+#   tags_info: ../data/NLNG Tags, KPIs, Objects for Dashboard v1.xlsx
+# output:
+#   selected_tags: ../result/selected_tags.csv
+#   new_selected_tags: ../result/new_selected_tags.csv
+#   cv_tags_min_max: ../result/cv_tags_min_max.csv
+#   new_cv_tags_min_max: ../result/new_cvs_min_max.csv
+#   feat_imp_dict:
+#     round1: ../result/dict/feat_importance_round1_20runs.json
+#     round2: ../result/dict/feat_importance_round2_20runs.json
+#     round3: ../result/dict/feat_importance_round3_20runs.json
+    
+target_variable: &target '314FT010.PNT'
