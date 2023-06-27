@@ -1,22 +1,45 @@
+target_variable: &target '314FT010.PNT'
+
 path:
-  raw_data: ../data/alldata.csv # very large
+  # raw_data: ../data/alldata.csv # very large
   processed_data: ../data/my_dataframe2.csv # data after EDA
   tags_info: ../data/NLNG Tags, KPIs, Objects for Dashboard v1.xlsx
-  new_ctrl_tags: ../data/Control Tags list V4.xlsx
-  selected_tags: ../result/selected_tags.csv
-  new_selected_tags: ../result/new_selected_tags.csv
-  cv_tags_min_max: ../result/cv_tags_min_max.csv
-  new_cv_tags_min_max: ../result/new_cvs_min_max.csv
-  feat_imp_dict:
-    round1: ../result/dict/feat_importance_round1_20runs.json
-    round2: ../result/dict/feat_importance_round2_20runs.json
-    round3: ../result/dict/feat_importance_round3_20runs.json
+  all_product_result: ../data/All_product_result.csv # provided by client
+
+  v1:
+    selected_tags: ../result/v1/selected_tags.csv
+    cv_tags_min_max: ../result/v1/cv_tags_min_max.csv
+
+  v2:
+    ctrl_tags: ../data/Control Tags list V4.xlsx
+    feat_imp_dict:
+      round1: ../result/v2/dict/feat_importance_round1_20runs.json
+      round2: ../result/v2/dict/feat_importance_round2_20runs.json
+      round3: ../result/v2/dict/feat_importance_round3_20runs.json
+    plots: ../result/v2/plots/
+    feat_imp_csv: ../result/v2/Feature Importances for CVs Round 3.csv
+    corr_score: ../result/v2/Correlation score for Yield tags wrt LNG product.csv
+    selected_tags: ../result/v2/selected_tags.csv
+    cv_tags_min_max: ../result/v2/cv_tags_min_max.csv
+
   v3:
-    feat_imp_dict2:
-      round1: ../result/dict/latest/feat_importance_round1_20runs.json
-      round2: ../result/dict/latest/feat_importance_round2_20runs.json
-      round3: ../result/dict/latest/feat_importance_round3_20runs.json
-    selected_tags: ../result/latest_result/new_selected_feats.csv
+    ctrl_tags: ../data/CV Tags Process Control.xlsx
+    feat_imp_dict: ../result/v3/dict/feat_importance_round1_20runs.json
+    feat_imp_csv: ../result/v3/Feature Importances for CVs Round 1.csv
+    selected_tags: ../result/v3/selected_tags.csv
+    plots: ../result/v3/plots/
+    corr_score: ../result/v3/Correlation score for Yield tags wrt LNG product.csv
+    cv_tags_min_max: ../result/v3/cv_tags_min_max.csv
+    
+num_selected_cvs:
+  v1: 21 # 14 + 7
+  v2: 21
+  v3: 60
+num_selected_non_cvs:
+  v1: 176
+  v2: 530
+  v3: 524
+
 
 # data:
 #   raw_data: ../data/alldata.csv # very large
@@ -31,5 +54,3 @@ path:
 #     round1: ../result/dict/feat_importance_round1_20runs.json
 #     round2: ../result/dict/feat_importance_round2_20runs.json
 #     round3: ../result/dict/feat_importance_round3_20runs.json
-    
-target_variable: &target '314FT010.PNT'

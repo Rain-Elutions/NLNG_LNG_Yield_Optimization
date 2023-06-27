@@ -23,9 +23,9 @@ preprocessing:
 
 
 xgboost_regressor_config:
-  model_path: ../result/LNG_XGB_model.pkl
-  new_model_path: ../result/new_LNG_XGB_model.pkl
-  v3_model_path: ../result/latest_result/new_LNG_XGB_model.pkl
+  v1_model_path: ../result/v1/LNG_XGB_model.pkl
+  v2_model_path: ../result/v2/LNG_XGB_model.pkl
+  v3_model_path: ../result/v3/LNG_XGB_model.pkl
   model_config:
     n_estimators: 7200
     max_depth: 4
@@ -44,22 +44,43 @@ xgboost_regressor_config:
     random_state: 42
   
 result_generating:
-  visualization:
-    controllable_result_path:
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_1.html
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_2.html
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_3.html
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_4.html
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_5.html
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_6.html
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_7.html
-      - ../result/latest_result/NLNG LNG Controllable_Result_Before & After Optimization_8.html
-
-    optimized_target_level_path: ../result/latest_result/LNG_level_plot.html
-
-  outputing:
-    output_path: ../result/latest_result/LNG_Optimization_output.csv
-    output_path: ../result/latest_result/knn_LNG_Optimization_output.csv
-    all_product_output_path: ../result/latest_result/All_product_result.csv
+  v1:
+    visualization:
+      controllable_result_path:
+        - ../result/v2/plots/NLNG LNG Controllable_Result_Before & After Optimization_1.html
+        - ../result/v2/plots/NLNG LNG Controllable_Result_Before & After Optimization_2.html
+        - ../result/v2/plots/NLNG LNG Controllable_Result_Before & After Optimization_3.html
+      optimized_target_level_path: ../result/v2/plots/LNG_level_plot.html
+    outputing:
+      output_path: ../result/v2/LNG_Optimization_output.csv
+      output_path: ../result/v2/knn_LNG_Optimization_output.csv
+      all_product_output_path: ../result/v2/All_product_result.csv
+  v2:
+    visualization:
+      controllable_result_path:
+        - ../result/v2/plots/NLNG LNG Controllable_Result_Before & After Optimization_1.html
+        - ../result/v2/plots/NLNG LNG Controllable_Result_Before & After Optimization_2.html
+        - ../result/v2/plots/NLNG LNG Controllable_Result_Before & After Optimization_3.html
+      optimized_target_level_path: ../result/v2/plots/LNG_level_plot.html
+    outputing:
+      output_path: ../result/v2/LNG_Optimization_output.csv
+      output_path: ../result/v2/knn_LNG_Optimization_output.csv
+      all_product_output_path: ../result/v2/All_product_result.csv
+  v3:
+    visualization:
+      controllable_result_path:
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_1.html
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_2.html
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_3.html
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_4.html
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_5.html
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_6.html
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_7.html
+        - ../result/v3/plots/NLNG LNG Controllable_Result_Before & After Optimization_8.html
+      optimized_target_level_path: ../result/v3/plots/LNG_level_plot.html
+    outputing:
+      output_path: ../result/v3/LNG_Optimization_output.csv
+      output_path: ../result/v3/knn_LNG_Optimization_output.csv
+      all_product_output_path: ../result/v3/All_product_result.csv
 
     
